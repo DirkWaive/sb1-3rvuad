@@ -1,0 +1,139 @@
+/* Base styles */
+#timesheet-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.timesheet-light {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.timesheet-dark {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+.timesheet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.timesheet-controls {
+    display: flex;
+    gap: 10px;
+}
+
+/* Form styles */
+.day-section {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.day-toggle {
+    width: 100%;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.timesheet-dark .day-toggle {
+    background-color: #444;
+    color: #f5f5f5;
+}
+
+.day-content {
+    display: none;
+    padding: 15px;
+}
+
+.full-width-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.timesheet-dark .full-width-input {
+    background-color: #555;
+    color: #f5f5f5;
+    border-color: #777;
+}
+
+.shifts-section, .radio-group {
+    margin-bottom: 15px;
+}
+
+.shift-checkbox {
+    margin-right: 10px;
+}
+
+.radio-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.save-day-button, #submit-timesheet {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.save-day-button:hover, #submit-timesheet:hover {
+    background-color: #45a049;
+}
+
+#submit-timesheet {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Dark mode toggle */
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.timesheet-light .moon-icon,
+.timesheet-dark .sun-icon {
+    display: inline-block;
+}
+
+.timesheet-light .sun-icon,
+.timesheet-dark .moon-icon {
+    display: none;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    #timesheet-form-container {
+        padding: 10px;
+    }
+    
+    .timesheet-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .timesheet-controls {
+        margin-top: 10px;
+    }
+}
